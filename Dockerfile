@@ -14,7 +14,7 @@ ENV RAILS_ROOT /var/www/rails_app
 RUN mkdir -p $RAILS_ROOT
 RUN git clone https://github.com/heroku/ruby-getting-started.git $RAILS_ROOT
 
-COPY docker/nginx/nginx.conf /etc/nginx/conf.d/default.conf
+COPY docker/nginx/nginx.conf /etc/nginx/sites-enabled/default.conf
 RUN service nginx restart
 
 # Set working directory
