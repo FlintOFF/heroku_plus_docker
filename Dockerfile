@@ -15,7 +15,7 @@ RUN mkdir -p $RAILS_ROOT
 RUN git clone https://github.com/heroku/ruby-getting-started.git $RAILS_ROOT
 
 COPY docker/nginx/nginx.conf /etc/nginx/conf.d/default.conf
-RUN /etc/init.d/nginx start
+RUN service nginx restart
 
 # Set working directory
 WORKDIR $RAILS_ROOT
