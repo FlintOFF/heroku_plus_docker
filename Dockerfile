@@ -11,4 +11,4 @@ WORKDIR $RAILS_ROOT
 ENV RAILS_ENV='development'
 ENV RACK_ENV='development'
 # Install GEMS
-RUN bundle install --jobs 20 --retry 5 --without development test
+RUN bundle install --jobs 20 --retry 5
