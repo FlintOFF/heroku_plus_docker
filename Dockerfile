@@ -8,7 +8,7 @@ COPY rails_app $RAILS_ROOT
 # Set working directory
 WORKDIR $RAILS_ROOT
 # Setting env up
-ENV RAILS_ENV='production'
-ENV RACK_ENV='production'
+ENV RAILS_ENV='development'
+ENV RACK_ENV='development'
 # Install GEMS
 RUN bundle install --jobs 20 --retry 5 --without development test
